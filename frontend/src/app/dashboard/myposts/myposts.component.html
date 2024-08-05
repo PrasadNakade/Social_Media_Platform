@@ -1,0 +1,33 @@
+<div>
+
+<textarea rows="3" cols="50"  [(ngModel)]="posts">
+
+</textarea><br>
+
+<button (click)="post()">post</button>
+<div>
+    <table border="1">
+       <tbody *ngFor="let post of postlist">
+        <tr>
+       <td>{{post.content}}</td>
+       <td>{{post.date | date:'short'}}</td>
+        <td>{{post.likecount}}</td>
+        <button (click)="comments(post)">comment</button>
+        <div *ngIf="wts==1">
+            <table border="1">
+                
+                <tr *ngFor="let c of commentlist">
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.comment }}</td>
+                    <td>{{ c.date | date:'short' }}</td>
+                </tr>
+                
+            </table>
+
+        </div>
+    </tr>
+    </tbody>
+    </table>
+</div>
+
+</div>

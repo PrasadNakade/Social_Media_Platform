@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+button:focus {
+    outline: none;
+}
+
+h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-link {
+    color: #3897f0;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+
+
+.demo {
+    position: fixed;
+   
+    right:280px;
+    top: 150px;
+    width: 150px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.demo h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: black;
+}
+
+.demo p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: black;
+}

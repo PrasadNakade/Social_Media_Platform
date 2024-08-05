@@ -1,0 +1,17 @@
+<table border="1">
+    <tr>
+        <th>UserName</th>
+        <th>Accepted</th>
+        <th>Reject</th>
+        <th>Block</th>
+    </tr>
+    
+    <!-- accept reject block button  -->
+    <tr *ngFor="let user of waitingreq; let i=index">
+        <td>{{user.username}}</td>
+        <td><button (click)="setconnections(user.id,2)">Accept</button></td>
+        <td><button (click)="setconnections(user.id,3)">Reject</button></td>
+        <td><button (click)="setconnections(user.id,4)">Block</button></td>
+
+    </tr>
+</table>

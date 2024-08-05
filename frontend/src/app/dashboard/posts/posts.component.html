@@ -1,0 +1,64 @@
+<table border="1">
+    <tr *ngFor="let post of postslist">
+        <td>
+            {{post.name}}<br>
+            {{post.content}}<br>
+            {{post.date| date:'short'}}<br>
+            Likes:{{post.likecount}}<button (click)="likes(post)">Like</button><br>
+            <button (click)="comments(post)">comment</button>
+            <tr>
+                <td>
+                    <textarea rows="2" cols="40" [(ngModel)]="post.comment"></textarea>
+                </td>
+                <td>
+                    <button (click)="addcomment(post)">Add Comment</button>
+                </td>
+            </tr>
+            <div *ngIf="wts==1">
+                <table border="1">
+                    
+                    <tr *ngFor="let c of commentlist">
+                        <td>{{ c.name }}</td>
+                        <td>{{ c.comment }}</td>
+                        <td>{{ c.date | date:'short' }}</td>
+                    </tr>
+                    
+                </table>
+
+            </div>
+        </td>
+    </tr>
+    
+
+</table>
+
+
+<!-- <table border="1">
+    <tr *ngFor="let post of postlist">
+        <td>{{post.name}}</td>
+        <td>{{post.content}}</td>
+        <td>{{post.date | date:'short'}}</td>
+        Likes: <td>{{post.likecount}} <button (click)="likes(post)">Like</button></td>
+        <button (click)="comments(post)">Comments</button>
+        <tr>
+           <td> 
+            <textarea rows="2" cols="40" [(ngModel)]="comment"></textarea>
+        </td>
+            <td>
+                <button (click)="addcomment(post)">addcomment</button>
+            </td>
+
+        </tr>
+
+        <div *ngIf="wts==1">
+            <table border="1">
+                <tr *ngFor = "let c of commentlist">
+                    <td>{{c.name}}</td>
+                    <td>{{c.comment }}</td>
+                    <td>{{c.date | date:'short'}}</td> 
+
+                </tr>
+               
+            </table>
+        </div>
+</table> -->

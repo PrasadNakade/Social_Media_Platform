@@ -1,0 +1,22 @@
+<input type="text" [(ngModel)]="this.uiname">
+<button (click)="search(this.search)">search</button>
+
+<div>
+<table border="1">
+    <th>id</th>
+    <th>name</th>
+    <th>follow</th>
+<!-- we get object of list in user(data) like for each loop (we want to print the list of users name start with..) -->
+    <tr *ngFor="let user of this.list ; let i=index"> 
+    <td>{{i+1}}</td>
+    <td>{{user.username}}</td>
+        <td>
+            <button (click)="follow(user.id)">follow</button>
+        </td>
+        
+</tr>  
+</table>
+</div>
+
+
+

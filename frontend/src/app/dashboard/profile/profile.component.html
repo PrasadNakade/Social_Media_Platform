@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="profile">
+    
+    followers:{{this.followers}}   <br><br>
+    following:{{this.following}}    <br><br>
+    status:{{this.status}}<button (click)="changeStatus()">changeStatus</button> <br>
+    
+
+    <button (click)="getfollowerslist();wts=1" >Followers</button>
+    <button (click)="getfollowinglist();wts=2">Following</button>
+    <!-- <button (click)="myPosts();wts=3">MyPosts</button> -->
+
+    <div *ngIf="wts==1" > 
+        <table border="1">
+            <th>SN</th>
+            <th>Name</th>
+       
+        <tr *ngFor="let user of followerslist; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{user.username}}</td>
+    </tr>
+</table>
+    </div>
+    
+    <div *ngIf="wts==2" > 
+        <table border="1">
+            <th>SN</th>
+            <th>Name</th>
+        
+        <tr *ngFor="let user of followingList; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{user.username}}</td>
+        
+       </tr>
+</table>
+    </div>
+    <!-- <div *ngIf="wts==3">
+        <table border="1">
+            <th>Content</th>
+            <th>Date</th>
+            <th>like</th>
+           <tr *ngFor="let post of postlist">
+           <td>{{post.content}}</td>
+           <td>{{post.date | date:'short'}}</td>
+            <td>{{post.likecount}}</td>
+        </tr>
+        </table>
+    </div> -->
+
+</div>
+</body>
+</html>

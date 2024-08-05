@@ -1,0 +1,36 @@
+<div class="content">
+
+
+<h2>Welcome {{this.namea}} </h2>
+<button (click)="this.dashboardToShow=1">profile</button>
+<button (click)="this.dashboardToShow=2">search</button>
+<button (click)="this.dashboardToShow=3">waitingrequests</button>
+<button (click)="this.dashboardToShow=4">posts</button>
+<button (click)="this.dashboardToShow=5">chats</button>
+<button (click)="this.dashboardToShow=6">myposts</button>
+<button (click)="this.dashboardToShow=7">reels</button>
+
+
+
+
+<div *ngIf="dashboardToShow==1">
+    <app-profile></app-profile> 
+</div>
+<div *ngIf="dashboardToShow==2">
+    <app-search></app-search>
+</div>
+<div *ngIf="dashboardToShow==3">   
+    <app-waiting-requests></app-waiting-requests>
+</div>
+<div *ngIf="dashboardToShow==4">
+    <app-posts></app-posts>
+</div>
+<div *ngIf="dashboardToShow==5">
+    <app-chat></app-chat>
+</div>
+<div *ngIf="dashboardToShow==6">
+<app-myposts></app-myposts>
+</div>
+<div *ngIf="dashboardToShow==7">
+<app-reels></app-reels>
+</div>

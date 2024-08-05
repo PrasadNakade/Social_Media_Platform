@@ -1,0 +1,50 @@
+.content{
+    /* General Styles */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  
+  button {
+    background-color: rgb(117, 113, 100); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: lightgrey;
+  }
+  
+  /* Content Area Styles */
+  
+  .content {
+    display: flex; /* Arranges content divs horizontally */
+    justify-content: space-around; /* Evenly distributes content divs */
+    margin-top: 20px;
+  }
+  
+
+  .content div {
+    width: 200px; /* Adjust width as needed */
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+}
